@@ -1,0 +1,4 @@
+# src-tauri/.gitignore
+target/
+whisper-models/
+*.wav
