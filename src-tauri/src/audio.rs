@@ -51,7 +51,8 @@ impl AudioRecorder {
         let is_recording = Arc::clone(&self.is_recording);
         let is_recording_stream = Arc::clone(&self.is_recording);
         let base_dir = self.base_dir.clone();
-        let chunk_duration = 5u64;
+        // ⚡ 1 segundo - ultra-responsivo, Groq é rápido o suficiente
+        let chunk_duration = 1u64;
 
         *is_recording.lock().unwrap() = true;
 
